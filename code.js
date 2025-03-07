@@ -17,7 +17,6 @@ function flip(array, n) {
 // Use only flip() here to manipulate the array
 function pancakeSort(array) {
     var sorted = false;
-    var counter = 0;
     while(!sorted){
         var spatula = 2;
         while (spatula <= array.length-1){
@@ -51,10 +50,7 @@ function pancakeSort(array) {
                 break;
             }
         }
-        counter++;
     }
-    
-    console.log(counter);
 
     return array;
 }
