@@ -1,10 +1,13 @@
 function flip(array, n) {
+    //creates a new array 
     var myArray = new Array(n);
     var counter = 0;
+    //for each element before the pivot append them to the array backwords
     for (var i = n-1; i >= 0; i--) {
         myArray[counter] = array[i];
         counter++;
     }
+    //for each element in the backwords array replace elements in the original array.
     for (var i = 0; i < n; i++){
         array[i] = myArray[i];
     }
@@ -55,16 +58,3 @@ function pancakeSort(array) {
 
     return array;
 }
-
-
-//var longArray = Array.from({ length: 10000 }, () => Math.floor(Math.random() * 1001));
-
-//console.log(pancakeSort(longArray));
-//var array1 = [1,2,3,4,5,6,7,8,9,10];
-//var array2 = [1,7,5,12,2,3,4];
-//var array3 = [100,77,88,101,66,78]; //works
-//console.log(pancakeSort(array1))
-//console.log(pancakeSort(array2))
-//console.log(pancakeSort(array3))
-
-//console.log(pancakeSort([3, 0, 3]))
