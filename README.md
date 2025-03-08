@@ -39,8 +39,10 @@ outer loop runs atmost n times and the inner loop runs n times aswell, at the en
 T(n) = n * n $\in \theta(n^2)$
 
 Flips:
-the flips happend whenever a loop condition is met and in the worst case there may be a flip every comparison making it the same as the comparions:
+the flips happend whenever a loop condition is met and in the worst case there would be a flip every comparison making it the same as the comparions:
 
 T(n) = n * n $\in \theta(n^2)$
+
+In the best case flip would not be called, because it only flips something if its out of order. 0 times!
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
