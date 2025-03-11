@@ -29,3 +29,29 @@ What is the asymptotic runtime ($\Theta$) of your algorithm in terms of the
 number of comparisons of pancakes? What is it in terms of the number of flips?
 Add your answer to this markdown file.
 
+So my implementation has three nested loops at its center. The way i see this sort working is that it tries to seperate the high numbers from the low numbers and with enough attempts they graduly seperate into the right order. I bet it looks adjacent to bubble sort. Im going to assume though this logic that this algorithm can atleast find 1 correctly placed element per loop, meaning that the outer loop runs in the worst case n times. The next loop iterates though every element in the array and follows some not so easy logic that i made up. So obiously it also runs n ammount of times. Then finally my flip implementation is just bad and iterates though every element before the spatula 2 times, first to put it in an array and second to get it back out, in the worste case this will happend the length of the array, so 2n times for the flip function.
+
+In the end my pancake sort implementation is T(n) = 2n * n * n $\in$ $\theta(n^3)$
+
+Comparisons:
+outer loop runs atmost n times and the inner loop runs n times aswell, at the end of these are always the comparisons making the comparisons:
+
+T(n) = n * n $\in \theta(n^2)$
+
+Flips:
+the flips happend whenever a loop condition is met and in the worst case there would be a flip every comparison making it the same as the comparions:
+
+T(n) = n * n $\in \theta(n^2)$
+
+In the best case flip would not be called, because it only flips something if its out of order. 0 times!
+
+If you say it so, there must be a better way but i couldnt come up with it on my own.
+I used this site: https://www.geeksforgeeks.org/pancake-sorting/
+looks like im doing a lot more work than i have to in my algorithm because if i made my Flipping streagy better it could be reduced to a $O(n)$ timee complexity instead of a $O(n^2)$. The strategy they use is:
+1. Fidn the largest unsorted element in the array
+2. flip it to the top if its not allready there
+3. flit it into its correcct position meaning the last unsorted index
+4. repeat for the remaniing unsorted portion of the array.
+This would mean that it would atmost be $O(n) flips, O(n) times meaning this algorithm has the complexity of O(n^2)$
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
