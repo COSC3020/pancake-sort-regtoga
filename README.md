@@ -45,4 +45,13 @@ T(n) = n * n $\in \theta(n^2)$
 
 In the best case flip would not be called, because it only flips something if its out of order. 0 times!
 
+If you say it so, there must be a better way but i couldnt come up with it on my own.
+I used this site: https://www.geeksforgeeks.org/pancake-sorting/
+looks like im doing a lot more work than i have to in my algorithm because if i made my Flipping streagy better it could be reduced to a $O(n)$ timee complexity instead of a $O(n^2)$. The strategy they use is:
+1. Fidn the largest unsorted element in the array
+2. flip it to the top if its not allready there
+3. flit it into its correcct position meaning the last unsorted index
+4. repeat for the remaniing unsorted portion of the array.
+This would mean that it would atmost be $O(n) flips, O(n) times meaning this algorithm has the complexity of O(n^2)$
+
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
